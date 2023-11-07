@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!--------------------- Navbar ---------------------->
+    <nav>
+        <h1 class="nav__heading">Where is the world?</h1>
+        <div class="dark__mode">
+            <i class="fa-regular fa-moon"></i>
+            <p class="dark__mode__text">Dark Mode</p>
+        </div>
+    </nav>
+    <!--------------------- Main ---------------------->
+    <main>
+        <div class="main__top">
+            <form action="" class="form__control">
+                <input type="search" name="search" class="search" placeholder="Search for a country...">
+                <i class="search-icon fa-solid fa-magnifying-glass"></i>
+            </form>
+            <div class="dropDown-Container">
+                <div class="dropDown__filter">
+                    <p class="dropDown__filter__text">Filter by Region</p>
+                    <i class="dropDown__chevron fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropDown__box">
+                    <p>All</p>
+                    <p>Africa</p>
+                    <p>America</p>
+                    <p>Asia</p>
+                    <p>Europe</p>
+                    <p>Oceania</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="main__bottom">
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <!-- <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div>
+            <div class="country">
+                <div class="country__img">
+                    <img src="https://flagcdn.com/ss.svg" alt="-- country flag">
+                </div>
+                <div class="country__content">
+                    <h2 class="country__name">Brazil</h2>
+                    <p class="country__population">Population: <span>123,123,123</span></p>
+                    <p class="country__region">Region: <span>America</span></p>
+                    <p class="country__capital">Capital: <span>Brasilia</span></p>
+                </div>
+            </div> -->
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+
+</html>

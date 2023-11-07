@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,800&display=swap');
+
+:root {
+/* ### Neutral */
+--Dark-Blue--Dark-Mode-Elements: hsl(209, 23%, 22%);
+--Very-Dark-Blue--Dark-Mode-Background: hsl(207, 26%, 17%);
+--Very-Dark-Blue--Light-Mode-Text: hsl(200, 15%, 8%);
+--Dark-Gray--Light-Mode-Input: hsl(0, 0%, 52%);
+--Very-Light-Gray--Light-Mode-Background: hsl(0, 0%, 98%);
+--White--Dark-Mode-Text-and-Light-Mode-Elements: hsl(0, 0%, 100%);
+
+--ff-primary:  'Nunito Sans', sans-serif;
+--fw-regular: 400;
+--fw-semiBold: 600;
+--fw-extraBold: 800;
+
+--shadow: 2px 2px 5px 0px rgba(0, 0, 0, .05);
+--border-radius: .3rem;
+--transition: all 300ms ease;
+}
+/* =================================================
+                    General CSS
+====================================================*/
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: var(--ff-primary);
+    background: var(--Very-Light-Gray--Light-Mode-Background);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+/* =================================================
+                    Navbar
+====================================================*/
+nav {
+    background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .1);
+}
+
+.dark__mode {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    cursor: pointer;
+}
+
+.dark__mode__text {
+    font-weight: var(--fw-semiBold);
+}
+
+
+/* =================================================
+                    Main Section
+====================================================*/
+main {
+    /* background: var(--Very-Light-Gray--Light-Mode-Background); */
+    padding: 3rem 4rem 2rem;
+}
+
+.main__top {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+}
+
+.form__control input {
+    position: absolute;
+    background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    width: 30rem;
+    padding: 1rem 0 1rem 4rem;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.form__control input::placeholder {
+    color: var(--Dark-Gray--Light-Mode-Input);
+}
+
+.form__control i {
+    position: relative;
+    left: 26px;
+    top: 14px;
+    color: var(--Dark-Gray--Light-Mode-Input);
+}
+
+.dropDown-Container {
+}
+
+.dropDown__filter {
+    /* position: absolute; */
+    background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    width: 15rem;
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropDown__filter i {
+    cursor: pointer;
+    transform: rotate(180deg);
+    transition: var(--transition);
+}
+
+.dropDown__filter i.active {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+.dropDown__box {
+    position: relative;
+    top: .65rem;
+    box-shadow: var(--shadow);
+    background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    width: 15rem;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+
+    /* display: none; */
+    transform: translateY(100%);
+    opacity: 0;
+    scale: 0;
+    transform-origin: bottom;
+    transition: var(--transition);
+}
+
+.dropDown__box.active {
+    /* display: block; */
+    transform: translateY(0);
+    opacity: 1;
+    scale: 1;
+}
+
+.dropDown__box.active p:hover {
+    background: var(--Very-Light-Gray--Light-Mode-Background);
+}
+
+
+.main__bottom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    /* background: pink; */
+}
+
+.country {
+    width: 16rem;
+    background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    box-shadow: var(--shadow);
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+.country__img {
+    /* height: 100%; */
+}
+.country__img img {
+    width: 100%;
+    height: 100%;
+    /* width: 24rem; */
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    /* object-fit: cover; */
+    /* border: 1px solid gold; */
+}
+
+.country__content {
+    padding: 1.2rem 1.5rem 3rem;
+}
+
+.country__name {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.country__content p {
+    margin-bottom: .4rem;
+    font-weight: var(--fw-semiBold);
+}
+
+img {
+    width: 4rem;
+}
+
+
+
+
+
