@@ -61,9 +61,41 @@ nav {
     gap: .6rem;
     cursor: pointer;
 }
+.dark__mode i.fa-solid {
+    color: white;
+}
 
 .dark__mode__text {
     font-weight: var(--fw-semiBold);
+}
+
+body.dark {
+    background: var(--Very-Dark-Blue--Dark-Mode-Background);
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+}
+
+nav.dark {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
+}
+
+.form__control.dark input {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
+}
+
+.form__control.dark input::placeholder {
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+}
+
+.form__control.dark i {
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+}
+
+.dropDown-Container.dark .dropDown__filter {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
+}
+
+.dropDown-Container.dark .dropDown__box {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
 }
 
 
@@ -161,18 +193,24 @@ main {
 .main__bottom {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 5rem;
     /* background: pink; */
 }
 
 .country {
-    width: 16rem;
+    /* width: 16rem; */
     background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
     box-shadow: var(--shadow);
     /* border: 2px solid red; */
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: .6fr 1fr;
+    border-radius: var(--border-radius)
     
+}
+
+.country.dark {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
+    /* display: none; */
 }
 
 .country__img {
@@ -180,7 +218,7 @@ main {
 }
 .country__img img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     /* width: 24rem; */
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     /* object-fit: cover; */
@@ -208,4 +246,74 @@ img {
 
 
 
+/* =================================================
+                    MQ Small Laptop()
+====================================================*/
+@media screen and (max-width:75em) {
+    body {
+        /* background: red; */
+    }
 
+    .main__bottom {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+
+    .country {
+        /* grid-template-rows: 1fr 1fr; */
+    }
+}
+
+
+/* =================================================
+                    MQ Tablet()
+====================================================*/
+@media screen and (max-width:56em) {
+    body {
+        /* background: pink; */
+    }
+
+    .main__top {
+        height: 11rem;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .form__control input {
+        width: 84%;
+    }
+
+    .main__bottom {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+}
+
+/* =================================================
+                    MQ Mobile()
+====================================================*/
+@media screen and (max-width:37.5em) {
+    body {
+        /* background: green; */
+    }
+
+    main {
+        padding: 3rem 3rem 2rem;
+    }
+
+    nav {
+        padding: 2rem 1rem;
+    }
+
+    .nav__heading {
+        font-size: 1.3rem;
+    }
+
+    .form__control input {
+        width: 75%;
+    }
+
+    .main__bottom {
+        grid-template-columns: 1fr;
+    }
+}

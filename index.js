@@ -16,7 +16,7 @@ function countries(data) {
     const country = document.createElement("country");
     country.classList.add("country");
     country.innerHTML = `<div class="country__img">
-            <img src="${data.flags.png}" alt="${data.name.common} country flag">
+            <img src="${data.flags.svg}" alt="${data.name.common} country flag">
         </div>
         <div class="country__content">
             <h2 class="country__name">${data.name.common}</h2>
@@ -97,3 +97,24 @@ searchInput.addEventListener("input", () => {
 
 
 
+// ================================
+const darkMode = document.querySelector(".dark__mode");
+const moonIcon = document.querySelector(".dark__mode i");
+const body = document.querySelector("body");
+const nav = document.querySelector("nav");
+const searchBox = document.querySelector(".form__control");
+const dropDownContainer = document.querySelector(".dropDown-Container");
+// const dropDownBox = document.querySelector(".dropDown__box");
+darkMode.addEventListener("click", () => {
+    moonIcon.classList.toggle("fa-solid");
+    body.classList.toggle("dark");
+    nav.classList.toggle("dark");
+    searchBox.classList.toggle("dark");
+    dropDownContainer.classList.toggle("dark");
+    // dropDownBox.classList.toggle("dark");
+    const countryElements = document.querySelectorAll(".country");
+    countryElements.forEach((countryElement) => {
+        countryElement.classList.toggle("dark");
+        console.log(countryElement);
+    });
+})
