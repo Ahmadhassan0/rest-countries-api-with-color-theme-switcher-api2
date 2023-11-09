@@ -5,8 +5,7 @@ async function getCountries() {
     const raw = await fetch("https://restcountries.com/v3.1/all");
     const res = await raw.json();
     res.forEach((element) => {
-        countries(element)
-        // filterRegion(element);
+        countries(element);
     })
 }
 getCountries();
@@ -16,7 +15,7 @@ function countries(data) {
     const country = document.createElement("country");
     country.classList.add("country");
     country.innerHTML = `<div class="country__img">
-            <img src="${data.flags.svg}" alt="${data.name.common} country flag">
+        <a href="./detail.html"><img src="${data.flags.svg}" alt="Click to view details about the ${data.name.common}"></a>
         </div>
         <div class="country__content">
             <h2 class="country__name">${data.name.common}</h2>
@@ -27,67 +26,42 @@ function countries(data) {
     countriesGrid.appendChild(country);
 }
 
-const filterRegionText = document.querySelector(".dropDown__filter__text");
+// function to show/hide drop Down box 
 const filterArrow = document.querySelector(".dropDown__chevron");
 const dropDownBox = document.querySelector(".dropDown__box");
-const dropDownBoxP = document.querySelectorAll(".dropDown__box p");
-
-// function to show/hide drop Down box 
 filterArrow.addEventListener("click", (e) => {
     dropDownBox.classList.toggle("active");
     e.currentTarget.classList.toggle("active");
 })
 
-// function to add drop down text into Filter box
-// dropDownBoxP.forEach((e) => {
-//     e.addEventListener("click", (e) => {
 
-//         filterRegionText.innerText = e.target.innerText;
-//         console.log(filterRegionText)
-
-//     })
-// })
-// function filterRegion (data) {
-//     const region = dropDownBox.children;
-//     // dropDownBox.innerText = data.region;
-//     if(region === data.region) {
-//         region.innerText = "";
-//     } else {
-//         region.innerText = data.region;
-//     }
-//     console.log(region)
-//     }
+// Filtering the Countries by region
+const dropDownBoxP = document.querySelectorAll(".dropDown__box p");
 const countryRegion = document.getElementsByClassName("country__region");
-// const countryRegion = document.querySelectorAll(".country__region p");
-const main__bottom = document.querySelector(".main__bottom");
-// console.log(countryRegion)
+const filterRegionText = document.querySelector(".dropDown__filter__text");
 dropDownBoxP.forEach(element => {
     element.addEventListener("click", () => {
         // console.log(element);
         Array.from(countryRegion).forEach(elem => {
-            console.log(elem.innerText);
-            if(elem.innerText.includes(element.innerText) || element.innerText == "All") {
+            // console.log(elem.innerText);
+            if (elem.innerText.includes(element.innerText) || element.innerText == "All") {
                 elem.parentElement.parentElement.style.display = "grid";
             } else {
                 elem.parentElement.parentElement.style.display = "none";
             }
         })
-
-        // console.log(countryRegion)
-        
-        // filterRegionText.innerText = e.target.innerText;
-        // console.log(filterRegionText)
-
+        filterRegionText.innerText = element.innerText;
     })
 })
 
 
+// Find Country through Search
 const searchInput = document.querySelector(".search");
 const countryName = document.getElementsByClassName("country__name");
 searchInput.addEventListener("input", () => {
     console.log(searchInput.value)
     Array.from(countryName).forEach((elem) => {
-        if(elem.innerText.toLowerCase().includes(searchInput.value.toLowerCase())) {
+        if (elem.innerText.toLowerCase().includes(searchInput.value.toLowerCase())) {
             elem.parentElement.parentElement.style.display = "grid";
         } else {
             elem.parentElement.parentElement.style.display = "none";
@@ -96,25 +70,27 @@ searchInput.addEventListener("input", () => {
 })
 
 
-
-// ================================
+// Theme switching
 const darkMode = document.querySelector(".dark__mode");
 const moonIcon = document.querySelector(".dark__mode i");
 const body = document.querySelector("body");
 const nav = document.querySelector("nav");
 const searchBox = document.querySelector(".form__control");
 const dropDownContainer = document.querySelector(".dropDown-Container");
-// const dropDownBox = document.querySelector(".dropDown__box");
 darkMode.addEventListener("click", () => {
     moonIcon.classList.toggle("fa-solid");
     body.classList.toggle("dark");
     nav.classList.toggle("dark");
     searchBox.classList.toggle("dark");
     dropDownContainer.classList.toggle("dark");
-    // dropDownBox.classList.toggle("dark");
     const countryElements = document.querySelectorAll(".country");
     countryElements.forEach((countryElement) => {
         countryElement.classList.toggle("dark");
         console.log(countryElement);
     });
 })
+
+
+/* =================================================
+                    Detail JS
+====================================================*/

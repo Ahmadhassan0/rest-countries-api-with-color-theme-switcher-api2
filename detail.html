@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="stylesheet" href="./src/css/detail.css">
+    
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!--------------------- Navbar ---------------------->
+    <nav>
+        <h1 class="nav__heading">Where is the world?</h1>
+        <div class="dark__mode">
+            <i class="fa-regular fa-moon"></i>
+            <p class="dark__mode__text">Dark Mode</p>
+        </div>
+    </nav>
+    <!--------------------- Main ---------------------->
+    <main>
+        <div class="detail__top">
+            <a href="./index.html" aria-label="Go back to the previous page"><i class="fa-solid fa-arrow-left-long"></i> Back</a>
+        </div>
+        <section class="country__detail">
+            <div class="country__img">
+                <img src="https://flagcdn.com/be.svg" alt="Click to view details about the country">
+            </div>
+            <div class="country__stats">
+                <h1 class="country__name">Belgium</h1>
+                <div class="stats__box">
+                    <div class="stats__box__left">
+                        <p><strong>Native Name</strong> België</p>
+                        <p><strong>Population:</strong> 11,319,511 </p>
+                        <p><strong>Region:</strong> Europe</p>
+                        <p><strong>Sub Region:</strong> Western Europe</p>
+                        <p><strong>Capital:</strong> Brussels</p>
+                    </div>
+                    <div class="stats__box__right">
+                        <p><strong>Top Level Domain</strong> .be</p>
+                        <p><strong>Currencies</strong> Euro</p>
+                        <p><strong>Languages</strong>  Dutch, French, German</p>
+                    </div>
+                </div>
+                <div class="border__countries">
+                    <p><strong>Border Countries:</strong></p>
+                    <div class="border__county__box">
+                        <a href="#">France</a>
+                        <a href="#">Germany</a>
+                        <a href="#">Netherlands</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>

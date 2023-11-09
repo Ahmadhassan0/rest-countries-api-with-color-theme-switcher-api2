@@ -37,6 +37,11 @@ body {
     background: var(--Very-Light-Gray--Light-Mode-Background);
 }
 
+body.dark {
+    background: var(--Very-Dark-Blue--Dark-Mode-Background);
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+}
+
 img {
     display: block;
     width: 100%;
@@ -55,6 +60,10 @@ nav {
     box-shadow: 0 1px 5px 1px rgba(0, 0, 0, .1);
 }
 
+nav.dark {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
+}
+
 .dark__mode {
     display: flex;
     align-items: center;
@@ -69,41 +78,11 @@ nav {
     font-weight: var(--fw-semiBold);
 }
 
-body.dark {
-    background: var(--Very-Dark-Blue--Dark-Mode-Background);
-    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
-}
-
-nav.dark {
-    background: var(--Dark-Blue--Dark-Mode-Elements);
-}
-
-.form__control.dark input {
-    background: var(--Dark-Blue--Dark-Mode-Elements);
-}
-
-.form__control.dark input::placeholder {
-    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
-}
-
-.form__control.dark i {
-    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
-}
-
-.dropDown-Container.dark .dropDown__filter {
-    background: var(--Dark-Blue--Dark-Mode-Elements);
-}
-
-.dropDown-Container.dark .dropDown__box {
-    background: var(--Dark-Blue--Dark-Mode-Elements);
-}
-
 
 /* =================================================
                     Main Section
 ====================================================*/
 main {
-    /* background: var(--Very-Light-Gray--Light-Mode-Background); */
     padding: 3rem 4rem 2rem;
 }
 
@@ -123,8 +102,15 @@ main {
     box-shadow: var(--shadow);
 }
 
+.form__control.dark input {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
+}
+
 .form__control input::placeholder {
     color: var(--Dark-Gray--Light-Mode-Input);
+}
+.form__control.dark input::placeholder {
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
 }
 
 .form__control i {
@@ -134,11 +120,11 @@ main {
     color: var(--Dark-Gray--Light-Mode-Input);
 }
 
-.dropDown-Container {
+.form__control.dark i {
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
 }
 
 .dropDown__filter {
-    /* position: absolute; */
     background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
     width: 15rem;
     padding: 1rem;
@@ -147,6 +133,10 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.dropDown-Container.dark .dropDown__filter {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
 }
 
 .dropDown__filter i {
@@ -166,11 +156,9 @@ main {
     box-shadow: var(--shadow);
     background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
     width: 15rem;
-    padding: 1rem;
+    /* padding: 1rem; */
     border-radius: var(--border-radius);
     cursor: pointer;
-
-    /* display: none; */
     transform: translateY(100%);
     opacity: 0;
     scale: 0;
@@ -178,30 +166,39 @@ main {
     transition: var(--transition);
 }
 
+.dropDown-Container.dark .dropDown__box {
+    background: var(--Dark-Blue--Dark-Mode-Elements);
+}
+
 .dropDown__box.active {
-    /* display: block; */
     transform: translateY(0);
     opacity: 1;
     scale: 1;
 }
 
-.dropDown__box.active p:hover {
-    background: var(--Very-Light-Gray--Light-Mode-Background);
+.dropDown__box p {
+    padding: 1rem;
 }
 
+.dropDown__box p:hover {
+    background: var(--Very-Dark-Blue--Dark-Mode-Background);
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    border-radius: var(--border-radius);
+}
+.dropDown-Container.dark .dropDown__box p:hover {
+    background: var(--Very-Light-Gray--Light-Mode-Background);
+    color: var(--Very-Dark-Blue--Light-Mode-Text);
+}
 
 .main__bottom {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
-    /* background: pink; */
 }
 
 .country {
-    /* width: 16rem; */
     background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
     box-shadow: var(--shadow);
-    /* border: 2px solid red; */
     display: grid;
     grid-template-rows: .6fr 1fr;
     border-radius: var(--border-radius)
@@ -210,19 +207,12 @@ main {
 
 .country.dark {
     background: var(--Dark-Blue--Dark-Mode-Elements);
-    /* display: none; */
 }
 
-.country__img {
-    /* height: 100%; */
-}
+
 .country__img img {
     width: 100%;
-    /* height: 100%; */
-    /* width: 24rem; */
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    /* object-fit: cover; */
-    /* border: 1px solid gold; */
 }
 
 .country__content {
@@ -244,35 +234,21 @@ img {
 }
 
 
-
-
 /* =================================================
-                    MQ Small Laptop()
+                    MQ Small Laptop
 ====================================================*/
 @media screen and (max-width:75em) {
-    body {
-        /* background: red; */
-    }
-
     .main__bottom {
         grid-template-columns: repeat(3, 1fr);
         gap: 4rem;
-    }
-
-    .country {
-        /* grid-template-rows: 1fr 1fr; */
     }
 }
 
 
 /* =================================================
-                    MQ Tablet()
+                    MQ Tablet
 ====================================================*/
 @media screen and (max-width:56em) {
-    body {
-        /* background: pink; */
-    }
-
     .main__top {
         height: 11rem;
         flex-direction: column;
@@ -290,13 +266,9 @@ img {
 }
 
 /* =================================================
-                    MQ Mobile()
+                    MQ Mobile
 ====================================================*/
 @media screen and (max-width:37.5em) {
-    body {
-        /* background: green; */
-    }
-
     main {
         padding: 3rem 3rem 2rem;
     }

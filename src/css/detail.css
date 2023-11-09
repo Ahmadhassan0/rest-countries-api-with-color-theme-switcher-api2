@@ -1,0 +1,133 @@
+:root {
+/* ### Neutral */
+--Dark-Blue--Dark-Mode-Elements: hsl(209, 23%, 22%);
+--Very-Dark-Blue--Dark-Mode-Background: hsl(207, 26%, 17%);
+--Very-Dark-Blue--Light-Mode-Text: hsl(200, 15%, 8%);
+--Dark-Gray--Light-Mode-Input: hsl(0, 0%, 52%);
+--Very-Light-Gray--Light-Mode-Background: hsl(0, 0%, 98%);
+--White--Dark-Mode-Text-and-Light-Mode-Elements: hsl(0, 0%, 100%);
+
+--ff-primary:  'Nunito Sans', sans-serif;
+--fw-regular: 400;
+--fw-semiBold: 600;
+--fw-extraBold: 800;
+
+--shadow: 2px 2px 5px 0px rgba(0, 0, 0, .05);
+--shadow2: 1px 1px 5px rgba(0, 0, 0, .2);
+--border-radius: .3rem;
+--transition: all 300ms ease;
+}
+
+
+/* =================================================
+                    Main Section
+====================================================*/
+.detail__top {
+    margin: 2rem 0 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.detail__top   a{
+    background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    color: var(--Very-Dark-Blue--Light-Mode-Text);
+    padding: .5rem 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow2);
+    
+}
+
+.detail__top i {
+    color: var(--Very-Dark-Blue--Light-Mode-Text);
+    margin-right: .5rem;
+}
+
+.country__img {
+}
+.country__img img {
+    border-radius: 0;
+    width: 75%;
+}
+
+
+.country__detail  {
+    /* background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements); */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* gap: 8rem ; */
+    /* justify-content: space-between; */
+    /* background: red; */
+    color: var(--Very-Dark-Blue--Light-Mode-Text);
+    /* background-color: red; */
+    max-height: 39rem;
+    max-width: 94%;
+    margin: 0 auto;
+}
+
+.country__stats {
+    padding: 7rem 0;
+}
+
+.country__name {
+    font-size: 3rem;
+}
+
+.stats__box {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0  4rem ;
+    font-size: 1.2rem;
+}
+
+.stats__box__right {
+    margin-right: 7rem;
+}
+
+.stats__box p {
+    margin-bottom: .7rem;
+}
+
+.border__countries {
+    display: flex;
+    gap: 1.3rem;
+}
+
+.border__county__box  {
+
+}
+.border__county__box a {
+    background: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+    color: var(--Very-Dark-Blue--Light-Mode-Text);
+    box-shadow: var(--shadow2);
+    border-radius: var(--border-radius);
+    padding: .4rem 1.8rem;
+    margin-right: .4rem;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
