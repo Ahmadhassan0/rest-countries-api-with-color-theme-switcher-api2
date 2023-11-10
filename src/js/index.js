@@ -29,6 +29,10 @@ function countries(data) {
 // function to show/hide drop Down box 
 const filterArrow = document.querySelector(".dropDown__chevron");
 const dropDownBox = document.querySelector(".dropDown__box");
+console.log(dropDownBox);
+() => {
+    
+} 
 filterArrow.addEventListener("click", (e) => {
     dropDownBox.classList.toggle("active");
     e.currentTarget.classList.toggle("active");
@@ -58,6 +62,9 @@ dropDownBoxP.forEach(element => {
 // Find Country through Search
 const searchInput = document.querySelector(".search");
 const countryName = document.getElementsByClassName("country__name");
+() => {
+    
+}
 searchInput.addEventListener("input", () => {
     console.log(searchInput.value)
     Array.from(countryName).forEach((elem) => {
@@ -78,6 +85,7 @@ const nav = document.querySelector("nav");
 const searchBox = document.querySelector(".form__control");
 const dropDownContainer = document.querySelector(".dropDown-Container");
 darkMode.addEventListener("click", () => {
+    console.log(darkMode)
     moonIcon.classList.toggle("fa-solid");
     body.classList.toggle("dark");
     nav.classList.toggle("dark");
