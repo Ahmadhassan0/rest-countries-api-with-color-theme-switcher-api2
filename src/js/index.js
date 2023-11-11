@@ -13,6 +13,8 @@ const nav = document.querySelector("nav");
 const searchBox = document.querySelector(".form__control");
 const dropDownContainer = document.querySelector(".dropDown-Container");
 
+
+
 // async function for getting data from api
 async function getCountries() {
     const raw = await fetch("https://restcountries.com/v3.1/all");
@@ -94,6 +96,37 @@ darkMode.addEventListener("click", () => {
 })
 
 
-/* =================================================
-                    Detail JS
-====================================================*/
+/* ================= Detail JS ======================*/
+const countryDetailBox = document.querySelector(".country__detail");
+
+// function countryDetail (data) {
+//     countryDetailBox.innerHTML = `<div class="country__img">
+//                 <img src="${data.flags.svg}" alt="Click to view details about the country">
+//             </div>
+//             <div class="country__stats">
+//                 <h1 class="country__name">Belgium</h1>
+//                 <div class="stats__box">
+//                     <div class="stats__box__left">
+//                         <p><strong>Native Name</strong> België</p>
+//                         <p><strong>Population:</strong> 11,319,511 </p>
+//                         <p><strong>Region:</strong> Europe</p>
+//                         <p><strong>Sub Region:</strong> Western Europe</p>
+//                         <p><strong>Capital:</strong> Brussels</p>
+//                     </div>
+//                     <div class="stats__box__right">
+//                         <p><strong>Top Level Domain</strong> .be</p>
+//                         <p><strong>Currencies</strong> Euro</p>
+//                         <p><strong>Languages</strong>  Dutch, French, German</p>
+//                     </div>
+//                 </div>
+//                 <div class="border__countries">
+//                     <p><strong>Border Countries:</strong></p>
+//                     <div class="border__county__box">
+//                         <a href="#">France</a>
+//                         <a href="#">Germany</a>
+//                         <a href="#">Netherlands</a>
+//                     </div>
+//                 </div>
+//             </div>`;
+
+// }
